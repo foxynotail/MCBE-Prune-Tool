@@ -1,0 +1,23 @@
+<RCC>
+  <qresource prefix="MCBEAdmin">
+    <file>Resources/icons/endstone-block.png</file>
+    <file>Resources/icons/grass-block.png</file>
+    <file>Resources/icons/netherrack-block.png</file>
+    <file>Resources/icons/about.png</file>
+    <file>Resources/icons/folder.png</file>
+    <file>Resources/icons/minecraft.png</file>
+    <file>Resources/gfx/mc_logo.png</file>
+    <file>Resources/gfx/mcbe_logo.png</file>
+    <file>Resources/icons/minecraft2.png</file>
+    <file>Resources/icons/folder2.png</file>
+    <file>Resources/gfx/world_icon.jpg</file>
+    <file>Resources/gfx/world_icon_fade.jpg</file>
+    <file>Resources/icons/mcworld-file.png</file>
+    <file>Resources/icons/mcworld-file2.png</file>
+    <file>Resources/icons/mcworld-file3.png</file>
+  </qresource>
+  <qresource prefix="fonts">
+    <file>Resources/fonts/MinecraftFive-Regular.eot</file>
+    <file>Resources/fonts/Mojangles.ttf</file>
+  </qresource>
+</RCC>

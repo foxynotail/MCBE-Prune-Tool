@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dialog_worldChooser</class>
+ <widget class="QDialog" name="dialog_worldChooser">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Choose Minecraft World...</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="mcbeadmin.qrc">
+    <normaloff>:/MCBEAdmin/Resources/icons/minecraft2.png</normaloff>:/MCBEAdmin/Resources/icons/minecraft2.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#dialog_worldChooser {
+	background-color: #48494a
+}
+
+
+#worldList {
+font-family: &quot;Mojangles&quot;;
+font-size: 10pt;
+}
+
+#headerLabel {
+color: #FFFFFF;
+font-size:11pt;
+max-height: 48px;
+}
+
+#overworldLabel, #netherLabel, #endLabel {
+font-size: 10pt;
+color: #e9e9e9;
+}
+
+#cancelButton {
+    font-family: 'Mojangles';
+    font-size: 12pt;
+    border-radius: 2px;
+    border: 2px solid #5a5b5c;
+    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(125, 125, 125, 255), stop:1 rgba(100, 100, 100, 255));
+    color: #cccccc;
+	margin-top:4px;
+	margin-bottom:4px;
+height:48px;
+min-height:48px;
+}
+
+#cancelButton:hover {
+    border: 2px solid #e3e3e5;
+    color: #FFFFFF;
+}
+
+#cancelButton:focus {
+    border: 2px solid #cccccc;
+    color: #cccccc;
+}
+
+Line {
+    border: none;
+    outline: none;
+    height: 2.5px;
+    background-color: #5a5b5c;
+    border-top:#3a3a3b solid 3px;
+    padding:0px;
+margin: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+QListView { 
+	background-color: #5a5b5c;
+border-top: 1px solid #373737;
+border-left: 1px solid #373737;
+border-bottom: 1px solid #d0d1d4;
+border-right: 1px solid #d0d1d4;
+ }</string>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout">
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QListWidget" name="worldList">
+       <property name="font">
+        <font>
+         <family>Mojangles</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="cursor" stdset="0">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>0</number>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="tabKeyNavigation">
+        <bool>true</bool>
+       </property>
+       <property name="showDropIndicator" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="defaultDropAction">
+        <enum>Qt::IgnoreAction</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="textElideMode">
+        <enum>Qt::ElideRight</enum>
+       </property>
+       <property name="movement">
+        <enum>QListView::Static</enum>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::ListMode</enum>
+       </property>
+       <property name="modelColumn">
+        <number>0</number>
+       </property>
+       <property name="uniformItemSizes">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="sortingEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="cancelButton">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="mcbeadmin.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>dialog_worldChooser</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>358</x>
+     <y>571</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>282</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>worldList</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>dialog_worldChooser</receiver>
+   <slot>itemChosen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>412</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>395</x>
+     <y>414</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>itemChosen()</slot>
+ </slots>
+</ui>
